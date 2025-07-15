@@ -1,35 +1,18 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="노래를 공유받았어요!">
-    <meta name="author" content="Team HearUs">
-  
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="HearUs, Share your taste.">
-    <meta property="og:description" content="노래를 공유받았어요! 열어서 확인해보세요.">
-    <meta property="og:image" content="https://teamhearus.github.io/assets/og-image.png">
-    <meta property="og:url" content="https://teamhearus.github.io">
-  
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HearUs, Share your taste.">
-    <meta name="twitter:description" content="노래를 공유받았어요! 열어서 확인해보세요.">
-    <meta name="twitter:image" content="https://teamhearus.github.io/assets/og-image.png">
-  
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
-    <title>HearUs - 노래를 공유받았어요!</title>
-  
-    <script>
-      var urlParams = new URLSearchParams(window.location.search);
-      var id = urlParams.get('id');
-      if (id) {
-        window.location = "hearus://open?id=" + id;
-        setTimeout(function () {
-          window.location = "https://teamhearus.github.io/fallback?id=" + id;
-        }, 1500);
-      }
-    </script>
-  </head>
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="hearus, share your taste.">
+<meta name="author" content="Team HearUs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HearUs, Share your taste.">
+<meta property="og:description" content="노래를 공유받았어요! 열어서 확인해보세요.">
+<meta property="og:image" content="https://teamhearus.github.io/assets/og-image.png">
+<meta property="og:url" content="https://teamhearus.github.io">
+
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var id = urlParams.get('id');
+    window.location = "hearus://open?id=" + id;
+    setTimeout(function () {
+      window.location = "https://yourfallbacksite.com";
+    }, 2000);
+</script>
